@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nguyen Minh Hieu — Full Stack Developer</title>
+  <meta name="description" content="Portfolio cua Nguyen Minh Hieu — Full Stack Developer, ASP.NET Core, React, Node.js, NestJS, SQL Server va MongoDB." />
+  <meta name="author" content="Nguyen Minh Hieu" />
+  <meta name="theme-color" content="#05070f" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Noise texture overlay -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-track" aria-hidden="true">
+    <div class="scroll-fill" id="scrollFill"></div>
+  </div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- ─── HEADER ─────────────────────────── -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a class="logo" href="#hero" aria-label="Trang chủ">
+        <span class="logo-avatar">
+          <img src="assets/ironavt.jpg" alt="NMH" />
+        </span>
+        <span class="logo-dot">Nguyễn Minh Hiếu</span>
+      </a>
+
+      <nav class="nav" aria-label="Điều hướng chính">
+        <a class="nav-item" href="#about" data-nav>Giới thiệu</a>
+        <a class="nav-item" href="#projects" data-nav>Dự án</a>
+        <a class="nav-item" href="#experience" data-nav>Kinh nghiệm</a>
+        <a class="nav-item" href="#skills" data-nav>Kỹ năng</a>
+        <a class="nav-item" href="#contact" data-nav>Liên hệ</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn-outline" href="assets/cv.pdf" target="_blank" rel="noreferrer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Tải CV
+        </a>
+        <a class="btn-primary" href="mailto:minhhieunguyen2684@gmail.com?subject=Development%20Opportunity">Liên hệ ngay</a>
+      </div>
+
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <nav>
+        <a class="mob-link" href="#about" data-mob>Giới thiệu</a>
+        <a class="mob-link" href="#projects" data-mob>Dự án</a>
+        <a class="mob-link" href="#experience" data-mob>Kinh nghiệm</a>
+        <a class="mob-link" href="#skills" data-mob>Kỹ năng</a>
+        <a class="mob-link" href="#contact" data-mob>Liên hệ</a>
+      </nav>
+      <div class="mob-actions">
+        <a class="btn-outline" href="assets/cv.pdf" target="_blank">Tải CV</a>
+        <a class="btn-primary" href="mailto:minhhieunguyen2684@gmail.com">Liên hệ</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ─── HERO ──────────────────────────── -->
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+
+        <div class="hero-badge fade-up" style="--d:0ms">
+          <span class="badge-dot"></span>
+          <span>Full Stack Developer · Software Engineering</span>
+        </div>
+
+        <h1 class="hero-title fade-up" style="--d:80ms">
+          Phát triển<br/>
+          <em>web app </em> hiện đại<br/>
+          &amp; dễ mở rộng
+        </h1>
+
+        <p class="hero-sub fade-up" style="--d:160ms">
+          Mình là <strong>Nguyễn Minh Hiếu</strong> — sinh viên Software Engineering tại FPT University Cần Thơ.
+          Mình có kinh nghiệm qua các dự án với ASP.NET Core, React, Node.js, NestJS, SQL Server và MongoDB,
+          hướng tới xây dựng phần mềm đáng tin cậy, rõ ràng và thân thiện với người dùng.
+        </p>
+
+        <div class="hero-ctas fade-up" style="--d:240ms">
+          <a class="btn-primary btn-lg" href="#projects">Xem dự án</a>
+          <a class="btn-outline btn-lg" href="assets/cv.pdf" target="_blank" rel="noreferrer">Mở CV</a>
+        </div>
+
+        <div class="hero-stats fade-up" style="--d:320ms" aria-label="Thong ke nhanh">
+          <div class="stat">
+            <div class="stat-top">
+              <span class="stat-num" data-count="5">0</span>
+            </div>
+            <span class="stat-label">Dự án web</span>
+          </div>
+          <div class="stat">
+            <div class="stat-top">
+              <span class="stat-num" data-count="6">0</span>
+            </div>
+            <span class="stat-label">Chứng chỉ</span>
+          </div>
+          <div class="stat">
+            <div class="stat-top">
+              <span class="stat-num" data-count="2026">0</span>
+            </div>
+            <span class="stat-label">Tốt nghiệp dự kiến</span>
+          </div>
+        </div>
+
+        <div class="hero-scroll-hint fade-up" style="--d:400ms" aria-hidden="true">
+          <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+          <span>Cuộn xuống</span>
+        </div>
+      </div>
+
+      <!-- Profile summary panel -->
+      <div class="hero-deco fade-up" style="--d:200ms" aria-hidden="true">
+        <div class="profile-card">
+          <div class="profile-card-head">
+            <div class="profile-avatar">NMH</div>
+            <div>
+              <p class="profile-name">Nguyễn Minh Hiếu</p>
+              <p class="profile-role">Full Stack Developer</p>
+            </div>
+          </div>
+          <div class="profile-grid">
+            <div>
+              <span class="profile-k">Backend</span>
+              <strong>ASP.NET Core · NestJS · Node.js</strong>
+            </div>
+            <div>
+              <span class="profile-k">Frontend</span>
+              <strong>React · Ant Design · Tailwind CSS</strong>
+            </div>
+            <div>
+              <span class="profile-k">Database</span>
+              <strong>SQL Server · MySQL · MongoDB</strong>
+            </div>
+            <div>
+              <span class="profile-k">Tools</span>
+              <strong>Git · Docker · Postman · Swagger</strong>
+            </div>
+          </div>
+          <div class="profile-note">
+            <span>Target</span>
+            <p>Đóng góp vào team phát triển chuyên nghiệp, đồng thời tiếp tục nâng cao kỹ năng technical và communication.</p>
+          </div>
+        </div>
+
+        <div class="tech-badges">
+          <span class="tech-badge">C#</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">ASP.NET Core</span>
+          <span class="tech-badge">React</span>
+          <span class="tech-badge">NestJS</span>
+          <span class="tech-badge">SQL Server</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── ABOUT ─────────────────────────── -->
+    <section id="about" class="section">
+      <div class="container">
+
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span>Giới thiệu</span>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-left reveal">
+            <h2 class="section-title">Một developer trẻ với <em>định hướng sản phẩm</em></h2>
+            <p class="about-lead">
+              Mình yêu thích phát triển web app hiện đại, giải quyết vấn đề rõ ràng và phối hợp tốt trong các dự án nhóm.
+            </p>
+            <p class="about-body">
+              Theo CV mới, mình đã tham gia nhiều dự án học thuật và team-based project với ASP.NET Core,
+              React, Node.js, NestJS, SQL Server và MongoDB. Mình quan tâm đến RESTful API, authentication,
+              database development, version control và quy trình làm việc Agile.
+            </p>
+            <p class="about-body">
+              Mục tiêu hiện tại là đóng góp vào một team phát triển chuyên nghiệp, học thêm từ dự án thực tế
+              và liên tục cải thiện cả kỹ năng kỹ thuật lẫn giao tiếp.
+            </p>
+
+            <div class="about-links">
+              <a class="text-link" href="mailto:minhhieunguyen2684@gmail.com">
+                minhhieunguyen2684@gmail.com
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+              <a class="text-link" href="tel:+84339831009">
+                0339 831 009
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="about-right">
+            <div class="about-card reveal" style="--d:60ms">
+              <div class="about-card-icon">ED</div>
+              <div>
+                <p class="about-card-title">FPT University Cần Thơ</p>
+                <p class="about-card-sub">Software Engineering · 09/2022 – Expected 09/2026</p>
+              </div>
+            </div>
+            <div class="about-card reveal" style="--d:120ms">
+              <div class="about-card-icon">CT</div>
+              <div>
+                <p class="about-card-title">Ninh Kiều, Cần Thơ</p>
+                <p class="about-card-sub">Sẵn sàng làm remote hoặc on-site</p>
+              </div>
+            </div>
+            <div class="about-card reveal" style="--d:180ms">
+              <div class="about-card-icon">EN</div>
+              <div>
+                <p class="about-card-title">English: B1</p>
+                <p class="about-card-sub">Cambridge PET · Level C equivalent</p>
+              </div>
+            </div>
+            <div class="about-card reveal" style="--d:240ms">
+              <div class="about-card-icon">FS</div>
+              <div>
+                <p class="about-card-title">Full Stack Focus</p>
+                <p class="about-card-sub">ASP.NET Core · React · Node/NestJS</p>
+              </div>
+            </div>
+
+            <div class="values-box reveal" style="--d:300ms">
+              <p class="values-title">Giá trị cốt lõi</p>
+              <div class="values-list">
+                <span class="value-chip">Problem-solving</span>
+                <span class="value-chip">Làm việc nhóm</span>
+                <span class="value-chip">Time management</span>
+                <span class="value-chip">RESTful API</span>
+                <span class="value-chip">User-friendly software</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PROJECTS ──────────────────────── -->
+    <section id="projects" class="section section-dark">
+      <div class="container">
+
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span>Dự án</span>
+        </div>
+
+        <div class="projects-header">
+          <h2 class="section-title reveal">Những gì mình <em>đã xây dựng</em></h2>
+          <p class="section-sub reveal">Các dự án trong CV mới, trải dài từ Java/Jakarta EE đến ASP.NET Core, NestJS, React và Node.js.</p>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid"></div>
+
+        <div class="projects-note reveal">
+          <div class="note-inner">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <p>Mỗi dự án bên dưới được tóm tắt theo đúng timeline và công nghệ trong CV. Link repository/demo có thể cập nhật thêm khi sẵn sàng public.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── EXPERIENCE / EDUCATION ───────── -->
+    <section id="experience" class="section">
+      <div class="container">
+
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span>Học vấn & Chứng chỉ</span>
+        </div>
+
+        <h2 class="section-title reveal">Nen tang kien thuc</h2>
+
+        <div class="exp-layout">
+          <div class="exp-main">
+            <div class="exp-item reveal">
+              <div class="exp-timeline-dot"></div>
+              <div class="exp-content">
+                <div class="exp-header">
+                  <div>
+                    <p class="exp-role">Software Engineering</p>
+                    <p class="exp-org">FPT University Cần Thơ</p>
+                  </div>
+                  <span class="exp-time">09/2022 – Expected 09/2026</span>
+                </div>
+                <div class="exp-body">
+                  <p>Chương trình Software Engineering, kết hợp nền tảng thiết kế phần mềm, phát triển cơ sở dữ liệu, triển khai RESTful API và làm việc nhóm theo quy trình dự án.</p>
+                  <div class="exp-courses">
+                    <p class="exp-courses-title">Năng lực nổi bật theo CV:</p>
+                    <div class="exp-course-tags">
+                      <span class="exp-tag">Object-Oriented Programming</span>
+                      <span class="exp-tag">Software Design</span>
+                      <span class="exp-tag">Database Development</span>
+                      <span class="exp-tag">RESTful API Implementation</span>
+                      <span class="exp-tag">Git Version Control</span>
+                      <span class="exp-tag">Agile Collaboration</span>
+                    </div>
+                  </div>
+                  <div class="exp-achievements">
+                    <div class="exp-ach">
+                      <span class="exp-ach-icon">✓</span>
+                      Hoàn thành nhiều dự án học thuật và team-based software projects
+                    </div>
+                    <div class="exp-ach">
+                      <span class="exp-ach-icon">✓</span>
+                      Có kinh nghiệm với ASP.NET Core, React, Node.js, NestJS, SQL Server và MongoDB
+                    </div>
+                    <div class="exp-ach">
+                      <span class="exp-ach-icon">✓</span>
+                      Có chứng chỉ Cambridge B1 Preliminary và các chứng chỉ Coursera/CertNexus
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-col">
+            <p class="cert-col-title reveal">Chứng chỉ</p>
+            <div class="cert-list">
+              <div class="cert-card reveal" style="--d:0ms">
+                <div class="cert-icon">EN</div>
+                <div>
+                  <p class="cert-name">B1 Preliminary (PET)</p>
+                  <p class="cert-issuer">Cambridge University Press & Assessment</p>
+                </div>
+                <span class="cert-year">2026</span>
+              </div>
+              <div class="cert-card reveal" style="--d:80ms">
+                <div class="cert-icon">SD</div>
+                <div>
+                  <p class="cert-name">Software Development Lifecycle Specialization</p>
+                  <p class="cert-issuer">University of Minnesota · Coursera</p>
+                </div>
+                <span class="cert-year">2024</span>
+              </div>
+              <div class="cert-card reveal" style="--d:160ms">
+                <div class="cert-icon">PM</div>
+                <div>
+                  <p class="cert-name">Project Management Principles and Practices</p>
+                  <p class="cert-issuer">University of California, Irvine · Coursera</p>
+                </div>
+                <span class="cert-year">2025</span>
+              </div>
+              <div class="cert-card reveal" style="--d:240ms">
+                <div class="cert-icon">UX</div>
+                <div>
+                  <p class="cert-name">User Experience Research and Design Specialization</p>
+                  <p class="cert-issuer">University of Michigan · Coursera</p>
+                </div>
+                <span class="cert-year">2026</span>
+              </div>
+              <div class="cert-card reveal" style="--d:320ms">
+                <div class="cert-icon">ET</div>
+                <div>
+                  <p class="cert-name">Certified Ethical Emerging Technologist</p>
+                  <p class="cert-issuer">CertNexus · Coursera</p>
+                </div>
+                <span class="cert-year">2025</span>
+              </div>
+              <div class="cert-card reveal" style="--d:400ms">
+                <div class="cert-icon">B1</div>
+                <div>
+                  <p class="cert-name">English Certificate Level C</p>
+                  <p class="cert-issuer">FPT University Cần Thơ</p>
+                </div>
+                <span class="cert-year">B1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SKILLS ────────────────────────── -->
+    <section id="skills" class="section section-dark">
+      <div class="container">
+
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span>Kỹ năng</span>
+        </div>
+
+        <h2 class="section-title reveal">Tech stack <em>trong CV</em></h2>
+
+        <div class="skills-layout">
+          <div class="skill-group reveal" style="--d:0ms">
+            <div class="skill-group-header">
+              <div class="skill-group-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <h3 class="skill-group-name">Backend & API</h3>
+            </div>
+            <p class="skill-group-desc">Xây dựng RESTful API, MVC app, authentication và service layer.</p>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-item-top">
+                  <span class="skill-name">ASP.NET Core Web API / MVC</span>
+                  <span class="skill-level">Project</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-top">
+                  <span class="skill-name">Node.js / Express.js / NestJS</span>
+                  <span class="skill-level">Project</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="--w:76%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-top">
+                  <span class="skill-name">Java / Jakarta EE</span>
+                  <span class="skill-level">Academic</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-top">
+                  <span class="skill-name">JWT / REST Architecture</span>
+                  <span class="skill-level">Project</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="--w:72%"></div></div>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span>C#</span><span>.NET 8</span><span>TypeScript</span><span>Java</span><span>REST</span><span>Swagger</span>
+            </div>
+          </div>
+
+          <div class="skill-group reveal" style="--d:100ms">
+            <div class="skill-group-header">
+              <div class="skill-group-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <h3 class="skill-group-name">Frontend</h3>
+            </div>
+            <p class="skill-group-desc">Xây dựng giao diện web app với React ecosystem và Razor Views.</p>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-item-top">
+                  <span class="skill-name">React.js / Vite</span>
+                  <span class="skill-level">Project</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-top">
+                  <span class="skill-name">Ant Design / Tailwind CSS</span>
+                  <span class="skill-level">Project</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="--w:72%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-top">
+                  <span class="skill-name">Razor Views</span>
+                  <span class="skill-level">Project</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-top">
+                  <span class="skill-name">HTML5 / CSS3 / JavaScript</span>
+                  <span class="skill-level">Core</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span>React</span><span>Redux Toolkit</span><span>React Router</span><span>Ant Design</span><span>Tailwind</span>
+            </div>
+          </div>
+
+          <div class="skill-group reveal" style="--d:200ms">
+            <div class="skill-group-header">
+              <div class="skill-group-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </div>
+              <h3 class="skill-group-name">Database & Tools</h3>
+            </div>
+            <p class="skill-group-desc">Quản lý dữ liệu, API testing, version control và môi trường dev.</p>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-item-top">
+                  <span class="skill-name">SQL Server / MySQL</span>
+                  <span class="skill-level">Project</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-top">
+                  <span class="skill-name">MongoDB</span>
+                  <span class="skill-level">Project</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="--w:68%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-top">
+                  <span class="skill-name">Git / GitHub / Docker</span>
+                  <span class="skill-level">Workflow</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="--w:74%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-top">
+                  <span class="skill-name">Postman / Swagger / SSMS</span>
+                  <span class="skill-level">Tools</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="--w:76%"></div></div>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span>SQL Server</span><span>MySQL</span><span>MongoDB</span><span>Docker</span><span>Postman</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Learning roadmap -->
+        <div class="roadmap reveal">
+          <p class="roadmap-title">Các mảng đang đào sâu</p>
+          <div class="roadmap-items">
+            <div class="roadmap-item learning">
+              <span class="roadmap-status">Focus</span>
+              <span>Microservices</span>
+            </div>
+            <div class="roadmap-item learning">
+              <span class="roadmap-status">Focus</span>
+              <span>Ocelot API Gateway</span>
+            </div>
+            <div class="roadmap-item planned">
+              <span class="roadmap-status">Focus</span>
+              <span>SignalR</span>
+            </div>
+            <div class="roadmap-item planned">
+              <span class="roadmap-status">Focus</span>
+              <span>Authentication & Authorization</span>
+            </div>
+            <div class="roadmap-item planned">
+              <span class="roadmap-status">Focus</span>
+              <span>AI chatbot integration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CONTACT ───────────────────────── -->
+    <section id="contact" class="section">
+      <div class="container">
+
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span>Liên hệ</span>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-left reveal">
+            <h2 class="section-title">Sẵn sàng để <em>cùng xây dựng</em></h2>
+            <p class="contact-body">
+              Nếu bạn có vị trí phù hợp với Full Stack/Web Developer — từ .NET, React đến Node/NestJS —
+              mình sẵn sàng trao đổi về mục tiêu, stack và timeline.
+            </p>
+
+            <div class="contact-channels">
+              <a class="contact-channel" href="mailto:minhhieunguyen2684@gmail.com">
+                <div class="channel-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <p class="channel-label">Email</p>
+                  <p class="channel-value">minhhieunguyen2684@gmail.com</p>
+                </div>
+                <svg class="channel-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+              <a class="contact-channel" href="tel:+84339831009">
+                <div class="channel-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.16 6.16l.87-.87a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <p class="channel-label">Điện thoại</p>
+                  <p class="channel-value">0339 831 009</p>
+                </div>
+                <svg class="channel-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+              <div class="contact-channel" style="cursor:default">
+                <div class="channel-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <p class="channel-label">Địa điểm</p>
+                  <p class="channel-value">Ninh Kiều, Cần Thơ · Remote OK</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-ctas">
+              <a class="btn-primary btn-lg" href="mailto:minhhieunguyen2684@gmail.com?subject=Development%20Opportunity">
+                Gửi email ngay
+              </a>
+              <a class="btn-outline btn-lg" href="assets/cv.pdf" target="_blank" rel="noreferrer">
+                Tải CV (PDF)
+              </a>
+              <button class="btn-outline btn-lg" type="button" id="copyEmailBtn" data-copy="minhhieunguyen2684@gmail.com">
+                Copy email
+              </button>
+            </div>
+          </div>
+
+          <div class="contact-right reveal" style="--d:80ms">
+            <div class="contact-card">
+              <div class="cc-header">
+                <div class="cc-avatar">NMH</div>
+                <div>
+                  <p class="cc-name">Nguyễn Minh Hiếu</p>
+                  <p class="cc-role">Full Stack Developer · .NET · React</p>
+                </div>
+                <span class="available-badge">
+                  <span class="available-dot"></span>
+                  Available
+                </span>
+              </div>
+
+              <div class="cc-divider"></div>
+
+              <div class="cc-quick">
+                <p class="cc-quick-title">Quick message template</p>
+                <blockquote class="cc-quote">
+                  "Em là Nguyễn Minh Hiếu, ứng tuyển vị trí Full Stack/Web Developer.
+                  Em có kinh nghiệm dự án với ASP.NET Core, React, Node.js, NestJS,
+                  SQL Server và MongoDB. Em gửi CV và portfolio tại đây."
+                </blockquote>
+              </div>
+
+              <div class="cc-stats">
+                <div class="cc-stat">
+                  <span class="cc-stat-num">24h</span>
+                  <span class="cc-stat-label">Thời gian phản hồi</span>
+                </div>
+                <div class="cc-stat-div"></div>
+                <div class="cc-stat">
+                  <span class="cc-stat-num">B1</span>
+                  <span class="cc-stat-label">English</span>
+                </div>
+                <div class="cc-stat-div"></div>
+                <div class="cc-stat">
+                  <span class="cc-stat-num">2026</span>
+                  <span class="cc-stat-label">Expected graduation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ─── FOOTER ────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© <span id="footerYear"></span> Nguyễn Minh Hiếu. Tất cả quyền được bảo lưu.</p>
+      <div class="footer-links">
+        <a href="assets/cv.pdf" target="_blank" class="footer-link">CV</a>
+        <a href="#hero" class="footer-link">Lên đầu trang ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project detail modal -->
+  <dialog class="modal" id="projectModal" aria-label="Chi tiết dự án">
+    <div class="modal-inner">
+      <button class="modal-close-btn" id="modalClose" type="button" aria-label="Đóng">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-eyebrow">Project Details</div>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-meta">
+        <div>
+          <p class="modal-section-title">Highlights</p>
+          <ul class="modal-highlights" id="modalHighlights"></ul>
+        </div>
+        <div>
+          <p class="modal-section-title">Tech Stack</p>
+          <div class="modal-stack" id="modalStack"></div>
+        </div>
+      </div>
+      <div class="modal-actions" id="modalActions"></div>
+    </div>
+  </dialog>
+
+  <!-- Projects data -->
+  <script type="application/json" id="projectsData">
+  [
+    {
+      "title": "Motovibe",
+      "category": "Motorcycle Sales",
+      "year": "01/2025 - 04/2025",
+      "description": "Web-based motorcycle sales and management system, hỗ trợ bán xe, dịch vụ khách hàng và quản lý tồn kho trong một dự án học thuật Java.",
+      "highlights": [
+        "Xây dựng backend bằng Java 8, Jakarta EE và Maven",
+        "Giao diện JSP/JSTL, HTML/CSS và JavaScript",
+        "Quản lý dữ liệu với Microsoft SQL Server",
+        "Tích hợp Jakarta Servlet API, Jakarta Mail API, GSON và OpenTelemetry"
+      ],
+      "stack": ["Java 8", "Jakarta EE", "SQL Server", "Maven", "JSP", "JSTL"],
+      "links": { "demo": "", "repo": "", "case": "" }
+    },
+    {
+      "title": "Education CRM System",
+      "category": "CRM Platform",
+      "year": "04/2025 - 08/2025",
+      "description": "Web development project tại Mobifone Service Company Area 9, hỗ trợ quản lý khách hàng, hợp đồng, doanh thu, chương trình đào tạo và chăm sóc khách hàng.",
+      "highlights": [
+        "Backend với NestJS, TypeORM, JWT và Swagger",
+        "Frontend với React, Vite, Ant Design, Redux Toolkit và React Router",
+        "Quản lý dữ liệu bằng MySQL",
+        "Có authentication/authorization, dashboard, file upload/download và data export"
+      ],
+      "stack": ["NestJS", "TypeORM", "JWT", "React", "Ant Design", "MySQL", "Docker"],
+      "links": { "demo": "", "repo": "", "case": "" }
+    },
+    {
+      "title": "Shoe Store Website",
+      "category": "E-commerce",
+      "year": "09/2025 - 12/2025",
+      "description": "Online e-commerce system cho cửa hàng giày, quản lý quy trình bán hàng từ hiển thị sản phẩm, giỏ hàng, đặt hàng, thanh toán đến đánh giá sản phẩm.",
+      "highlights": [
+        "Backend bằng C#, ASP.NET Core MVC và Entity Framework Core",
+        "Frontend với HTML, CSS, JavaScript và Razor Views",
+        "Database Microsoft SQL Server",
+        "Quản lý sản phẩm, đơn hàng, thanh toán và product reviews"
+      ],
+      "stack": ["C#", "ASP.NET Core MVC", "Entity Framework Core", "Razor Views", "SQL Server"],
+      "links": { "demo": "", "repo": "", "case": "" }
+    },
+    {
+      "title": "FutureLearn",
+      "category": "Online Learning",
+      "year": "01/2026 - 04/2026",
+      "description": "Web-based online learning platform mô phỏng hệ thống học trực tuyến thực tế, gồm authentication, course management, content delivery, payment, analytics và AI chatbot.",
+      "highlights": [
+        "Backend với .NET 8, ASP.NET Core Web API và ASP.NET Core MVC",
+        "Microservices architecture với Ocelot API Gateway",
+        "Tích hợp JWT Authentication, Swagger, OData, AutoMapper, SignalR, Cloudinary, MailKit và Groq API",
+        "Database Microsoft SQL Server"
+      ],
+      "stack": [".NET 8", "ASP.NET Core Web API", "Microservices", "Ocelot", "SignalR", "SQL Server"],
+      "links": { "demo": "", "repo": "", "case": "" }
+    },
+    {
+      "title": "UniLife",
+      "category": "Canteen Management",
+      "year": "04/2026 - Present",
+      "description": "University canteen management platform giúp số hóa và tối ưu vận hành cho administrators, staff và customers.",
+      "highlights": [
+        "Backend Node.js, Express.js và RESTful API",
+        "Frontend React, Vite, Ant Design và Tailwind CSS",
+        "Database MongoDB với modular backend architecture",
+        "Bao gồm role-based access control, order processing, kitchen queue, inventory, suppliers và notifications"
+      ],
+      "stack": ["Node.js", "Express.js", "React", "Vite", "Ant Design", "Tailwind CSS", "MongoDB"],
+      "links": { "demo": "", "repo": "", "case": "" }
+    }
+  ]
+  </script>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
