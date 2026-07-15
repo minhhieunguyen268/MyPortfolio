@@ -268,7 +268,7 @@ function renderProjects() {
         (stackTags ? '<div class="project-stack">' + stackTags + '</div>' : '') +
         '<div class="project-footer">' +
           '<button class="project-detail-btn" type="button" data-open="' + i + '">' +
-            'Chi tiết' +
+            'Details' +
             '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>' +
           '</button>' +
         '</div>' +
@@ -324,7 +324,7 @@ function openModal(p) {
       links.repo ? '<a class="btn-outline" href="' + esc(links.repo) + '" target="_blank" rel="noreferrer">Repo ↗</a>' : '',
     ].filter(Boolean).join('');
 
-    actEl.innerHTML = chips || '<span class="modal-no-links">Link chưa có — sẽ cập nhật sau.</span>';
+    actEl.innerHTML = chips || '<span class="modal-no-links">Links not available — will be updated later.</span>';
   }
 
   if (typeof modal.showModal === 'function') modal.showModal();

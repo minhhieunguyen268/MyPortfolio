@@ -57,6 +57,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  cursor: none;
 }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; border: none; background: none; }
@@ -286,8 +287,12 @@ body.cursor-hover .cursor-ring { width: 52px; height: 52px; border-color: rgba(2
 .section-title em {
   font-style: italic;
   background: var(--grad-main);
-  -webkit-background-clip: text; background-clip: text;
+  -webkit-background-clip: text; 
+  background-clip: text;
   color: transparent;
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 12px;
 }
 
 .section-sub {
@@ -364,6 +369,7 @@ body.cursor-hover .cursor-ring { width: 52px; height: 52px; border-color: rgba(2
   background: var(--grad-main);
   -webkit-background-clip: text; background-clip: text;
   color: transparent;
+  padding-right: 7px;
 }
 
 /* Sub */
@@ -896,7 +902,6 @@ body.cursor-hover .cursor-ring { width: 52px; height: 52px; border-color: rgba(2
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  line-clamp: 2;
   overflow: hidden;
   min-height: calc(2 * 1.5em);
 }
