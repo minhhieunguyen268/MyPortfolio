@@ -324,21 +324,26 @@ function openModal(p) {
       links.repo ? '<a class="btn-outline" href="' + esc(links.repo) + '" target="_blank" rel="noreferrer">Repo ↗</a>' : '',
     ].filter(Boolean).join('');
 
-    actEl.innerHTML = chips || '<span class="modal-no-links">Links not available — will be updated later.</span>';
+    
   }
 
-  if (typeof modal.showModal === 'function') modal.showModal();
-  else { modal.removeAttribute('hidden'); }
+ modal.setAttribute("aria-hidden", "false");
 
-  document.body.style.overflow = 'hidden';
+modal.classList.remove("open");
+void modal.offsetWidth;
+modal.classList.add("open");
+
+document.body.style.overflow = "hidden";
 }
 
-function closeModal() {
-  var modal = document.getElementById('projectModal');
-  if (!modal) return;
-  if (typeof modal.close === 'function') modal.close();
-  else modal.setAttribute('hidden', '');
-  document.body.style.overflow = '';
+function closeModal(){
+
+    var modal=document.getElementById("projectModal");
+
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden","true");
+
+    document.body.style.overflow="";
 }
 
 function initModal() {

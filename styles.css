@@ -91,7 +91,7 @@ li { list-style: none; }
 /* ─── CUSTOM CURSOR ───────────────────────────── */
 .cursor {
   position: fixed; top: 0; left: 0;
-  pointer-events: none; z-index: 9999;
+  pointer-events: none; z-index: 10001;
   mix-blend-mode: normal;
 }
 .cursor-dot {
@@ -1072,31 +1072,99 @@ body.cursor-hover .cursor-ring { width: 52px; height: 52px; border-color: rgba(2
 .cc-stat-div { width: 1px; height: 32px; background: var(--border2); }
 
 /* ─── MODAL ───────────────────────────────────── */
-.modal {
-  position: fixed; top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: min(800px, calc(100vw - 32px));
-  max-height: 88vh; overflow-y: auto;
-  border: 1px solid var(--border2);
-  border-radius: var(--radius2);
-  background: rgba(8,12,24,0.97);
-  backdrop-filter: blur(24px);
-  box-shadow: 0 40px 160px rgba(0,0,0,0.75);
-  color: var(--ink);
-  padding: 0;
-}
-.modal::backdrop { background: rgba(0,0,0,0.65); backdrop-filter: blur(4px); }
+.modal{
+    position: fixed;
+    inset: 0;
 
-.modal-inner { padding: 28px 32px; }
-.modal-close-btn {
-  position: absolute; top: 20px; right: 20px;
-  width: 36px; height: 36px; border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  background: var(--surface2); border: 1px solid var(--border2);
-  color: var(--ink2);
-  transition: background var(--t1), color var(--t1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .25s ease;
+
+    z-index: 10000;
 }
-.modal-close-btn:hover { background: rgba(255,255,255,0.12); color: var(--ink); }
+
+.modal.open{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(5,7,15,.72);
+    backdrop-filter:blur(10px);
+}
+
+.modal-inner{
+    position: relative;
+    z-index: 2;
+
+    width: min(760px, calc(100vw - 40px));
+    max-height: 85vh;
+    overflow-y: auto;
+
+    padding: 38px;
+    border-radius: 28px;
+
+    background: #0f1425;
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 30px 80px rgba(0,0,0,.45);
+
+    /* trạng thái ban đầu */
+    opacity: 0;
+    transform: translateY(30px) scale(.95);
+}
+
+.modal.open .modal-inner{
+    animation: modalShow .35s cubic-bezier(.22,1,.36,1) forwards;
+}
+
+
+.modal-close-btn{
+    position:absolute;
+    top:18px;
+    right:18px;
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+    border:none;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(255,255,255,.06);
+    color:#fff;
+
+    transition:.25s;
+}
+
+.modal-close-btn:hover{
+    background:#6c63ff;
+    transform:rotate(90deg);
+}
+
+/* Animation */
+@keyframes modalShow{
+    from{
+        opacity:0;
+        transform:translateY(30px) scale(.95);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
 
 .modal-eyebrow {
   font-size: 0.75rem; font-weight: 600; color: var(--a0);
