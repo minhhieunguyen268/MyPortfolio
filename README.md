@@ -26,7 +26,7 @@ Sua trong `index.html`:
 
 - Doi email/phone neu can.
 - Doi link `CV (PDF)` neu thay file khac.
-- CV dang duoc link o `assets/cv.pdf`.
+- CV dang duoc link o `assets/nguyenminhhieu_cv.pdf`.
 - Avatar logo dang doc tu `assets/ironavt.jpg`.
 
 Du an:
@@ -40,7 +40,7 @@ Du an:
 - `styles.css`: theme, layout, responsive, focus ring, animations
 - `app.js`: render projects, copy email, reveal on scroll, scroll-spy, mobile nav
 - `assets/favicon.svg`: favicon
-- `assets/cv.pdf`: CV PDF
+- `assets/nguyenminhhieu_cv.pdf`: CV PDF
 
 ## Lay text tu CV (optional)
 
