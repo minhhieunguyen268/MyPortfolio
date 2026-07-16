@@ -477,13 +477,13 @@ body.cursor-hover .cursor-ring { width: 52px; height: 52px; border-color: rgba(2
 .profile-avatar {
   width: 52px;
   height: 52px;
-  border-radius: var(--radius);
-  display: grid;
-  place-items: center;
-  background: var(--grad-main);
-  color: #040c10;
-  font-weight: 800;
-  letter-spacing: 0;
+  border-radius: 12px; /* hoặc 50% nếu muốn hình tròn */
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .profile-name {
